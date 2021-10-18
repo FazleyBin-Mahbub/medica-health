@@ -4,6 +4,7 @@ import "./Login.css";
 import googleImg from "../../images/google-img.png";
 import useAuth from "../../hooks/useAuth";
 import { useHistory, useLocation } from "react-router";
+import { NavLink } from "react-router-dom";
 const Login = () => {
   const { signInWithGoogle } = useAuth();
   const location = useLocation();
@@ -42,6 +43,14 @@ const Login = () => {
       <span onClick={handleGoogleSignIn} className="google-login">
         <img className="google-img" src={googleImg} alt="" />
       </span>
+      <div className="reg pt-4">
+        <p className="fw-bolder">
+          New In <code>Medica?</code>
+        </p>
+        <NavLink to="/register">
+          <p className="ps-1">Register</p>
+        </NavLink>
+      </div>
     </div>
   );
 };

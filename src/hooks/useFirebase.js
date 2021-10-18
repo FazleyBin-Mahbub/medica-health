@@ -10,8 +10,10 @@ import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
 const useFirebase = () => {
+  //  handle the user
   const [user, setUser] = useState({});
   const auth = getAuth();
+  // google auth provider 
   const googleProvider = new GoogleAuthProvider();
 
   //    google sign in
@@ -19,13 +21,14 @@ const useFirebase = () => {
     return signInWithPopup(auth, googleProvider);
   };
   //   logout function
-
+ 
+  
   const logout = () => {
     signOut(auth).then(() => {
       setUser({});
     });
   };
-
+  
   //   if user state change
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {

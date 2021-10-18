@@ -1,0 +1,12 @@
+.reg-form {
+  width: 40%;
+  margin-left: 400px;
+}
+.reg-btn {
+  border: navajowhite;
+  margin-top: 20px;
+  padding: 10px 160px;
+  background-color: #2f88fd;
+  color: #fff;
+  font-weight: 900;
+}
