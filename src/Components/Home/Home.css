@@ -1,0 +1,87 @@
+/* google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* full div  */
+div {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.home {
+  display: flex;
+  text-align: start;
+  align-items: center;
+
+  background: linear-gradient(#3acefc, #2a67fe);
+}
+.home-text {
+  font-size: 60px;
+  margin-left: 80px;
+  color: white;
+}
+.home-para {
+  color: white;
+  font-size: 20px;
+  padding-left: 85px;
+  font-weight: 900;
+}
+.home-img {
+  width: 100%;
+}
+
+.explore {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: start;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.emergency {
+  background-color: #38c3fb;
+  width: 40%;
+  color: white;
+  padding: 50px 40px;
+}
+
+.doctors {
+  background-color: #2f88fd;
+  width: 40%;
+  color: white;
+  padding: 50px 40px;
+}
+
+.appointment {
+  background-color: #1063cf;
+  width: 40%;
+
+  padding: 50px 40px;
+  color: white;
+}
+
+.appointment-input {
+  background-color: #2f88fd;
+  border: none;
+  color: white;
+  font: italic;
+  padding: 7px 36px;
+  outline: none;
+}
+.appointment-input:focus {
+  background-color: #1063cf;
+  border: 2px solid #0c69db;
+}
+
+.appointment-btn {
+  border: 2px solid white;
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #1063cf;
+  color: white;
+}
+
+.appointment-btn:hover {
+  background-color: #2f88fd;
+  border: none;
+}

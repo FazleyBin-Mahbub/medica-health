@@ -1,0 +1,13 @@
+.cart {
+  box-shadow: 1px 1px 7px rgb(212, 219, 217);
+  background-color: white;
+}
+.service-title {
+  padding-top: 20px;
+}
+.service-desc {
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 600;
+}

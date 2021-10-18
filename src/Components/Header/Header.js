@@ -1,11 +1,59 @@
-import React from 'react';
-
+import React from "react";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import "./Header.css";
+import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import image from "../../images/banner.webp";
 const Header = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const navStyle = {
+    color: "#4b83fc",
+    font: "montserrat",
+    fontSize: "17px",
+    fontWeight: "bold",
+  };
+  const { user, logout } = useAuth();
+  return (
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      className="nav-bg"
+      variant="dark"
+      sticky="top"
+    >
+      <Container>
+        <Navbar.Brand to="/home">
+          <img src={image} alt="" />
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Nav.Link style={navStyle} as={Link} to="/home">
+            Home
+          </Nav.Link>
+          <Nav.Link style={navStyle} as={Link} to="/home#services">
+            Services
+          </Nav.Link>
+          <Nav.Link style={navStyle} as={Link} to="/home#about">
+            About Us
+          </Nav.Link>
+          <Nav.Link style={navStyle} as={Link} to="/home#contact">
+            Contact Us
+          </Nav.Link>
+          {user.email ? (
+            <Button onClick={logout} variant="danger">
+              LogOut
+            </Button>
+          ) : (
+            <Nav.Link style={navStyle} as={Link} to="/home#login">
+              Login
+            </Nav.Link>
+          )}
+          <Navbar.Text className="text-muted">
+            Signed in as: {user.displayName}
+          </Navbar.Text>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 };
 
 export default Header;

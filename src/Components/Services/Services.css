@@ -1,0 +1,16 @@
+.services-card {
+  text-align: start;
+}
+.services {
+  display: flex;
+  text-align: start;
+  align-items: center;
+
+  margin-top: 16px;
+}
+
+.service-bg {
+  width: 70%;
+  border-radius: 5px;
+  margin-left: 7.4rem;
+}
