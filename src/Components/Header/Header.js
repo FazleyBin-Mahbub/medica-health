@@ -29,13 +29,13 @@ const Header = () => {
           <Nav.Link style={navStyle} as={Link} to="/home">
             Home
           </Nav.Link>
-          <Nav.Link style={navStyle} as={Link} to="/home#services">
+          <Nav.Link style={navStyle} as={Link} to="/services">
             Services
           </Nav.Link>
-          <Nav.Link style={navStyle} as={Link} to="/home#about">
+          <Nav.Link style={navStyle} as={Link} to="/about">
             About Us
           </Nav.Link>
-          <Nav.Link style={navStyle} as={Link} to="/home#contact">
+          <Nav.Link style={navStyle} as={Link} to="/contact">
             Contact Us
           </Nav.Link>
           {user.email ? (
@@ -43,11 +43,11 @@ const Header = () => {
               LogOut
             </Button>
           ) : (
-            <Nav.Link style={navStyle} as={Link} to="/home#login">
+            <Nav.Link style={navStyle} as={Link} to="/login">
               Login
             </Nav.Link>
           )}
-          <Navbar.Text className="text-muted">
+          <Navbar.Text className="text-muted ps-3">
             Signed in as: {user.displayName}
           </Navbar.Text>
         </Navbar.Collapse>

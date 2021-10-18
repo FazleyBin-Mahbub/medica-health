@@ -1,0 +1,32 @@
+.login-form {
+  width: 40%;
+
+  margin-left: 400px;
+}
+.login-btn {
+  border: navajowhite;
+  margin-top: 20px;
+  padding: 10px 160px;
+  background-color: #2f88fd;
+  color: #fff;
+  font-weight: 900;
+}
+
+.social-divider {
+  font-size: 15px;
+  padding-top: 10px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+
+.google-login {
+  background-color: #fff;
+  color: #fff;
+  font-weight: 900;
+  border: 2px solid #e6e6e6;
+  padding: 25px 10px;
+}
+.google-img {
+  width: 10%;
+  cursor: pointer;
+}

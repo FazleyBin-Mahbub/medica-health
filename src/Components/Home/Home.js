@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import bannerImg from "../../images/banner-img.png";
+import { NavLink } from "react-router-dom";
 const Home = () => {
   return (
     <div>
@@ -56,7 +57,9 @@ const Home = () => {
               placeholder="email"
             />
           </div>
-          <button className="appointment-btn">Make an Appointment</button>
+          <NavLink to="/services/:id">
+            <button className="appointment-btn">Make an Appointment</button>
+          </NavLink>
         </div>
       </div>
     </div>

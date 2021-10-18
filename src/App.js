@@ -11,6 +11,8 @@ import Register from "./Components/Register/Register";
 import Services from "./Components/Services/Services";
 import AuthProvider from "./context/AuthProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import SingleServiceDetail from "./Components/SingleServiceDetail/SingleServiceDetail";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 function App() {
   return (
@@ -35,6 +37,10 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
+            {/* ServiceDetail path  */}
+            <PrivateRoute exact path="/services/:id">
+              <SingleServiceDetail></SingleServiceDetail>
+            </PrivateRoute>
             {/* about us route  */}
             <Route exact path="/about">
               <About></About>
@@ -44,9 +50,9 @@ function App() {
               <Contact></Contact>
             </Route>
             {/* login route  */}
-            <PrivateRoute exact path="/login">
+            <Route exact path="/login">
               <Login></Login>
-            </PrivateRoute>
+            </Route>
             {/* register route if user new here  */}
             <Route exact path="/register">
               <Register></Register>
