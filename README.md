@@ -1,7 +1,5 @@
 # Getting Started with Medica-Health Care Website
 
-
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -9,11 +7,30 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [https://medica-ac3fb.web.app/](https://medica-ac3fb.web.app/) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+In this Project You can benefit with some features:
+
+ <ul>
+  <li>
+   Find Various Some of excellent Services
+  </li>
+  <li>
+ You can Know Service Detail
+  </li>
+  <li>
+  Introduce our excellent doctor
+  </li>
+  <li>
+   Know about us
+  </li>
+  <li>
+   You can Contact and Appoint with our doctors
+  </li>
+ </ul>
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
