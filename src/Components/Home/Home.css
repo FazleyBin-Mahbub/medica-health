@@ -74,9 +74,12 @@ div {
 }
 
 .appointment-btn {
-  border: 2px solid white;
+  border: none;
   margin-top: 50px;
   padding: 15px;
-  background-color: #1063cf;
+  background-color: #2f88fd;
   color: white;
+}
+.appointment-btn:focus {
+  outline: #38c3fb;
 }
