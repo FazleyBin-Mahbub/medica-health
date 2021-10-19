@@ -1,0 +1,67 @@
+/* contact us section  */
+.contact-sec {
+  background-image: url("../../images/contact-1.jpg");
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* contact container  */
+.contact-container {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+/* contact container image  */
+.contact-container img {
+  width: 90%;
+  border-radius: 20px;
+}
+/* contact container paragraph  */
+.contact-container p {
+  width: 80%;
+  line-height: 26px;
+}
+.contact-us-title {
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #4c5e78;
+  padding: 10px 30px;
+
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 5px 4px 13px 0px rgb(46 63 99 / 15%);
+}
+.contact-us-title::before {
+  content: "";
+  display: inline-block;
+  background: #66cfa9;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  margin-right: 7px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+/* contact us form  */
+.contact-form {
+  width: 90%;
+}
+/* get in touch button  */
+.contact-btn {
+  border: none;
+  background-color: #4b83fc;
+  box-shadow: 5px 4px 13px 0 rgba(75, 131, 252);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.contact-btn:hover {
+  background-color: #66cfa9;
+  transition: 0.5s;
+  color: white;
+}

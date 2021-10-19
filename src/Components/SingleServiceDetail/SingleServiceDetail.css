@@ -1,0 +1,19 @@
+.service-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-tags {
+  padding-left: 30px;
+}
+.service-tags h6 {
+  font-size: 30px;
+}
+.service-tags p {
+  line-height: 2;
+}
+.serviceDetail-img {
+  width: 80%;
+  margin-top: 20px;
+  border-radius: 10px;
+}

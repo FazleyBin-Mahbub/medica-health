@@ -1,0 +1,63 @@
+/* about section  */
+.about-sec {
+  background-image: url("../../images/about-bg.jpg");
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* about us track  */
+.about-us-title {
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #4c5e78;
+  padding: 9px 20px;
+  margin: 0px 0px 14px;
+  border-radius: 20px;
+  box-shadow: 5px 4px 13px 0px rgb(46 63 99 / 15%);
+}
+.about-us-title::before {
+  content: "";
+  display: inline-block;
+  background: #66cfa9;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  margin-right: 7px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+/* about us elemenetor-container */
+.elemenetor-container {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+/* about us elemenetor-container image */
+.elemenetor-container img {
+  width: 80%;
+  border-radius: 20px;
+}
+/* about us elemenetor-container image */
+.elemenetor-container p {
+  width: 80%;
+  line-height: 26px;
+}
+/* about section contact us button  */
+.about-more-info-btn {
+  border: none;
+  background-color: #4a81f8;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 4px 13px 0 rgba(75, 131, 252);
+}
+
+.about-more-info-btn:hover {
+  background-color: #66cfa9;
+  transition: 0.5s;
+  color: white;
+}
