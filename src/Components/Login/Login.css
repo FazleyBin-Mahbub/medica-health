@@ -32,3 +32,11 @@
   justify-content: center;
   align-items: flex-start;
 }
+
+@media only screen and (max-width: 576px) {
+  .login-form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 20px;
+  }
+}

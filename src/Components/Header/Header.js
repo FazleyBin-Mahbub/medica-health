@@ -39,16 +39,16 @@ const Header = () => {
             Contact Us
           </Nav.Link>
           {user.email ? (
-            <Button onClick={logout} variant="danger">
+            <Button className="fw-bolder" onClick={logout} variant="danger">
               LogOut
             </Button>
           ) : (
             <Nav.Link style={navStyle} as={Link} to="/login">
-              Login
+              Login/Registration
             </Nav.Link>
           )}
           <Navbar.Text className="text-muted ps-3">
-            Signed in as: {user.displayName}
+            Signed in as: <strong>{user.displayName}</strong>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>

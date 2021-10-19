@@ -90,3 +90,26 @@ div {
   color: #fff;
   font-weight: 900;
 }
+
+@media only screen and (max-width: 576px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .useful-links h6 {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: start;
+    padding-left: 40px;
+    padding-top: 40px;
+    text-decoration: underline;
+  }
+  .useful-links li {
+    text-align: start;
+    font-size: 14px;
+    font-weight: 900;
+    padding-top: 5px;
+    cursor: pointer;
+    margin-top: 0px;
+  }
+}

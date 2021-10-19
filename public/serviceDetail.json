@@ -1,0 +1,40 @@
+{
+  "serviceDetail": [
+    {
+      "id": "service01",
+      "name": "Dental Care",
+      "description": "Dental care is the maintenance of healthy teeth and may refer to: Oral hygiene, the practice of keeping the mouth and teeth clean in order to prevent dental disorders. Dentistry, the professional care of teeth, including professional oral hygiene and dental surgery.",
+      "image": "https://preview.colorlib.com/theme/medica/img/bg-img/service1.jpg.webp"
+    },
+    {
+      "id": "service02",
+      "name": "Gastroenterology",
+      "description": "Gastroenterology is the study of the normal function and diseases of the esophagus, stomach, small intestine, colon and rectum, pancreas, gallbladder, bile ducts and liver.In essence, all normal activity and disease of the digestive organs is part of the study of Gastroenterology.",
+      "image": "https://preview.colorlib.com/theme/medica/img/bg-img/xservice2.jpg.pagespeed.ic.yjpyK3tAyt.webp"
+    },
+    {
+      "id": "service03",
+      "name": "General Surgery",
+      "description": "General surgery is a surgical specialty that focuses on abdominal contents including the esophagus, stomach, small intestine, large intestine, liver, pancreas, gallbladder, appendix and bile ducts, and often the thyroid gland. appendix and bile ducts, and often the thyroid gland.",
+      "image": "https://preview.colorlib.com/theme/medica/img/bg-img/xservice3.jpg.pagespeed.ic.ziWPAqkAJi.webp"
+    },
+    {
+      "id": "service04",
+      "name": "Nutrition",
+      "description": "Nutrition is the process of consuming, absorbing, and using nutrients needed by the body for growth, development, and maintenance of life.",
+      "image": "https://preview.colorlib.com/theme/medica/img/bg-img/service4.jpg.webp"
+    },
+    {
+      "id": "service05",
+      "name": "Radiology",
+      "description": "Radiology is the medical discipline that uses medical imaging to diagnose and treat diseases within the bodies of animals and humans.",
+      "image": "https://preview.colorlib.com/theme/medica/img/bg-img/xservice5.jpg.pagespeed.ic.GZKeOM99tS.webp"
+    },
+    {
+      "id": "service06",
+      "name": "Ophthamology",
+      "description": "An ophthalmologist diagnoses and treats all eye diseases,performs eye surgery and prescribes and fits eyeglasses.performs eye surgery and prescribes and fits eyeglasses.",
+      "image": "https://preview.colorlib.com/theme/medica/img/bg-img/service6.jpg.webp"
+    }
+  ]
+}

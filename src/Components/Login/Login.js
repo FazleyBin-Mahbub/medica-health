@@ -65,7 +65,7 @@ const Login = () => {
       </Form>
 
       <p className="social-divider">
-        ----------or use one of these options----------
+        ---------- or use these option ----------
       </p>
 
       <span onClick={handleGoogleSignIn} className="google-login">
@@ -73,7 +73,7 @@ const Login = () => {
       </span>
       <div className="reg pt-4">
         <p className="fw-bolder">
-          New In <code>Medica?</code>
+          New In <code className="text-uppercase">Medica?</code>
         </p>
         <NavLink to="/register">
           <p className="ps-1">Register</p>

@@ -42,14 +42,7 @@ const useFirebase = () => {
       setError("Ensure string has two uppercase letters.");
       return;
     }
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        setUser(result.user);
-        setError("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // sign in with email and password
