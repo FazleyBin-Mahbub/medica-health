@@ -16,7 +16,7 @@ const Login = () => {
   } = useAuth();
   const location = useLocation();
   const history = useHistory();
-  const redirect_url = location.state?.from || "/services/:id";
+  const redirect_url = location.state?.from || "/services";
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then(() => {
@@ -31,7 +31,6 @@ const Login = () => {
     handleSignInWithEmailAndPassword()
       .then(() => {
         history.push(redirect_url);
-        setError("");
       })
       .catch((error) => {
         setError(error.message);
@@ -61,12 +60,10 @@ const Login = () => {
           <label>Password</label>
         </Form.Floating>
         <p className="text-danger pt-4 fw-bolder">{error}</p>
-        <button className="login-btn">Login</button>
+        <input type="submit" value="Login" className="login-btn" />
       </Form>
 
-      <p className="social-divider">
-        ---------- or use these option ----------
-      </p>
+      <p className="social-divider">---------- or use this option ----------</p>
 
       <span onClick={handleGoogleSignIn} className="google-login">
         <img className="google-img" src={googleImg} alt="" />

@@ -25,6 +25,8 @@ const useFirebase = () => {
   const [name, setName] = useState("");
   // blood group state change
   const [blood, setBlood] = useState("");
+  // address state change
+  const [address, setAddress] = useState("");
   // google auth provider
   const googleProvider = new GoogleAuthProvider();
 
@@ -33,15 +35,7 @@ const useFirebase = () => {
     return signInWithPopup(auth, googleProvider);
   };
   //  registraion
-  const handleRegistration = (e) => {
-    e.preventDefault();
-    if (password < 6) {
-      setError("Password Should be 6 Characters");
-    }
-    if (!/(?=.*[A-Z].*[A-Z]) /.test(password)) {
-      setError("Ensure string has two uppercase letters.");
-      return;
-    }
+  const handleRegistration = () => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -54,6 +48,11 @@ const useFirebase = () => {
     setEmail(e.target.value);
   };
 
+  // address change
+
+  const handleAddressChange = (e) => {
+    setAddress(e.target.value);
+  };
   // pass change
   const handlePassChange = (e) => {
     setPassword(e.target.value);
@@ -85,6 +84,7 @@ const useFirebase = () => {
     user,
     name,
     blood,
+    address,
     error,
     setError,
     signInWithGoogle,
@@ -93,6 +93,7 @@ const useFirebase = () => {
     handlePassChange,
     handleNameChange,
     handleBloodGroupChange,
+    handleAddressChange,
     handleSignInWithEmailAndPassword,
     logout,
   };

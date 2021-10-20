@@ -2,6 +2,7 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { useHistory, useLocation } from "react-router";
 import "./Register.css";
 const Register = () => {
   const {
@@ -11,11 +12,26 @@ const Register = () => {
     handleNameChange,
     handleBloodGroupChange,
     error,
+    setError,
+    handleAddressChange,
   } = useAuth();
 
+  const location = useLocation();
+  const history = useHistory();
+
+  const redirect_url = location.state?.from || "/services";
+  const registraion = () => {
+    handleRegistration()
+      .then(() => {
+        history.push(redirect_url);
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
   return (
     <div className="mt-5 reg-form">
-      <Form onSubmit={handleRegistration}>
+      <Form onSubmit={registraion}>
         <h1>Create a New Account</h1>
         <Form.Floating className="mb-3">
           <Form.Control
@@ -37,7 +53,12 @@ const Register = () => {
           <label>Email address</label>
         </Form.Floating>
         <Form.Floating className="mb-3">
-          <Form.Control type="text" placeholder="Dhaka-1214" required />
+          <Form.Control
+            onBlur={handleAddressChange}
+            type="city"
+            placeholder="Dhaka-1214"
+            required
+          />
           <label>Address</label>
         </Form.Floating>
         <Form.Floating className="mb-3">
@@ -59,7 +80,7 @@ const Register = () => {
           <label>Password</label>
         </Form.Floating>
         <p className="text-danger pt-4 fw-bolder">{error}</p>
-        <button className="reg-btn">Register</button>
+        <input type="submit" value="Register" className="reg-btn" />
       </Form>
 
       <div className="reg pt-4">
