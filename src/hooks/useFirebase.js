@@ -9,6 +9,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
+import { useHistory } from "react-router";
 
 initializeAuthentication();
 const useFirebase = () => {
@@ -30,18 +31,33 @@ const useFirebase = () => {
   // google auth provider
   const googleProvider = new GoogleAuthProvider();
 
+  const history = useHistory();
   //    google sign in
   const signInWithGoogle = () => {
     return signInWithPopup(auth, googleProvider);
   };
   //  registraion
-  const handleRegistration = () => {
-    return createUserWithEmailAndPassword(auth, email, password);
+  const handleRegistration = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        history.push("/home");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   // sign in with email and password
-  const handleSignInWithEmailAndPassword = () => {
-    return signInWithEmailAndPassword(auth, email, password);
+  const handleSignInWithEmailAndPassword = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        history?.push("/services");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
   // email change
   const handleEmailChange = (e) => {

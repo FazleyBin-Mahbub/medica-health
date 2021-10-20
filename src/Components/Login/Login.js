@@ -5,6 +5,7 @@ import googleImg from "../../images/google-img.png";
 import useAuth from "../../hooks/useAuth";
 import { useHistory, useLocation } from "react-router";
 import { NavLink } from "react-router-dom";
+
 const Login = () => {
   const {
     signInWithGoogle,
@@ -27,19 +28,9 @@ const Login = () => {
       });
   };
 
-  const emailAndPassSignIn = () => {
-    handleSignInWithEmailAndPassword()
-      .then(() => {
-        history.push(redirect_url);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  };
-
   return (
     <div className="mt-5 login-form">
-      <Form onSubmit={emailAndPassSignIn}>
+      <Form onSubmit={handleSignInWithEmailAndPassword}>
         <h1>Login</h1>
         <Form.Floating className="mb-3">
           <Form.Control

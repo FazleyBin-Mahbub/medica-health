@@ -2,7 +2,6 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { useHistory, useLocation } from "react-router";
 import "./Register.css";
 const Register = () => {
   const {
@@ -12,26 +11,13 @@ const Register = () => {
     handleNameChange,
     handleBloodGroupChange,
     error,
-    setError,
+
     handleAddressChange,
   } = useAuth();
 
-  const location = useLocation();
-  const history = useHistory();
-
-  const redirect_url = location.state?.from || "/services";
-  const registraion = () => {
-    handleRegistration()
-      .then(() => {
-        history.push(redirect_url);
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
-  };
   return (
     <div className="mt-5 reg-form">
-      <Form onSubmit={registraion}>
+      <Form onSubmit={handleRegistration}>
         <h1>Create a New Account</h1>
         <Form.Floating className="mb-3">
           <Form.Control
